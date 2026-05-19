@@ -7,7 +7,7 @@ type (
 		Context() context.Context
 		Exists(pred Pred) (bool, error)
 		Count(pred Pred) (uint64, error)
-		First(pred Pred) (Object, error)
+		First(pred Pred) (*Object, error)
 		Distinct(path Path, pred Pred) ([]any, error)
 		All(pred Pred, order Ordering, offset uint64, limit uint64) ([]Object, error)
 	}
